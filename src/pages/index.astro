@@ -1,5 +1,13 @@
 ---
-
+import NavBar from "../components/NavBar.astro";
+import HeroSection from "../components/HeroSection.astro";
+import FooterSection from "../components/FooterSection.astro";
+import DressCode from "../components/2024/DressCode.astro";
+import ThrowbackSection from "../components/2024/ThrowbackSection.astro";
+import SpeakersSection from "../components/2024/SpeakersSection.astro";
+import PartnerSponsors from "../components/2024/PartnerSponsors.astro";
+import JoinCommunity from "../components/2024/JoinCommunity.astro";
+import WorkExhibition from "../components/2024/WorkExhibition.astro";
 ---
 
 <html lang="en">
@@ -17,6 +25,23 @@
     <title>Enugu Devfest</title>
   </head>
   <body>
-    <h1 class="font-sans text-7xl font-bold">Astro</h1>
+    <div class="bg-[#E4FAFF]">
+      <NavBar />
+      <HeroSection />
+    </div>
+
+    <DressCode />
+
+    <ThrowbackSection />
+
+    <SpeakersSection />
+
+    <PartnerSponsors />
+
+    <WorkExhibition />
+
+    <JoinCommunity />
+
+    <FooterSection />
   </body>
 </html>

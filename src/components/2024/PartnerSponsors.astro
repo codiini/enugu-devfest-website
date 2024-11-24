@@ -1,0 +1,28 @@
+---
+import SponsorCard from "./SponsorCard.astro";
+---
+
+<section class="h-full py-32 bg-white">
+  <div class="px-8 container mx-auto">
+    <p class="uppercase font-medium text-center text-[#FAAB00] mb-4">
+      our sponsors &amp; partners
+    </p>
+
+    <div class="relative z-50 text-center w-full space-y-4 pb-10">
+      <h3
+        class="text-[#050505] font-bold text-[3.5rem] leading-tight max-w-5xl w-full mx-auto capitalize tracking-tighter"
+      >
+        It wouldn't be possible without the support of our partners and
+        sponsors.
+      </h3>
+      <p class="text-[#474747] mt-10 max-w-lg mx-auto">
+        Join us for thrilling sessions, workshops, and networking opportunities
+        around the exciting world of technology.
+      </p>
+    </div>
+
+    <div class="flex flex-wrap w-full gap-4">
+      {[1, 2, 3, 4, 5, 6].map(() => <SponsorCard />)}
+    </div>
+  </div>
+</section>

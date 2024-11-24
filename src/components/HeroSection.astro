@@ -1,0 +1,47 @@
+---
+import Icon from "./Icon.astro";
+---
+
+<header class="min-h-[70vh] h-full">
+  <div class="container mx-auto">
+    <div
+      class="pt-10 2xl:pt-32 text-center flex items-center justify-end flex-col space-y-10"
+    >
+      <h1 class="font-bold text-9xl tracking-tighter text-[#050505]">
+        Welcome to DevFest Enugu, 2024
+      </h1>
+      <p class="text-[#474747] mt-10 max-w-lg">
+        Join us for thrilling sessions, workshops, and networking opportunities
+        around the exciting world of technology.
+      </p>
+
+      <div class="flex gap-x-4 justify-center">
+        <a
+          href="#"
+          class="uppercase bg-[#050505] text-white transition ease-in-out hover:bg-transparent hover:border hover:border-[#050505] hover:text-black rounded-[50px] p-4 w-44 h-auto inline-flex justify-center items-center text-center"
+          >save your spot</a
+        >
+        <a
+          href="#"
+          class="border border-[#050505] uppercase bg-transparent text-[#050505] transition ease-in-out hover:bg-[#050505] hover:text-white rounded-[50px] p-4 w-44 h-auto inline-flex justify-center items-center text-center"
+          >see schedule</a
+        >
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="flex justify-evenly items-center bg-[#050505] text-white h-24">
+  <div class="flex items-center justify-center gap-x-2">
+    <Icon icon="calendar" />
+    <p>Saturday, December 7, 2024</p>
+  </div>
+  <div class="flex items-center justify-center gap-x-2">
+    <Icon icon="location-marker" />
+    <p>Hotel Sylvia Independence Avenue Enugu, 400102</p>
+  </div>
+  <div class="flex items-center justify-center gap-x-2">
+    <Icon icon="time" />
+    <p>10:30 AM – 3:45 PM (GMT+1)</p>
+  </div>
+</div>
