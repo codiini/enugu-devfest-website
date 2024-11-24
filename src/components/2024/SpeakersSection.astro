@@ -2,7 +2,7 @@
 import SpeakerCard from "./SpeakerCard.astro";
 ---
 
-<section class="h-full py-32 bg-[#FFE6E6]">
+<section id="speakers" class="h-full py-32 bg-[#FFE6E6]">
   <div class="px-8 container mx-auto">
     <p class="uppercase font-medium text-center text-[#FAAB00]">speakers</p>
 
@@ -14,8 +14,8 @@ import SpeakerCard from "./SpeakerCard.astro";
       </h3>
     </div>
 
-    <div class="grid grid-cols-4 place-content-center gap-x-4 h-full">
-      {[1, 2, 3, 4].map(() => <SpeakerCard />)}
+    <div class="grid grid-cols-center-4 gap-6">
+      {[1, 2, 3, 4, 5, 6, 7].map(() => <SpeakerCard />)}
     </div>
   </div>
 </section>

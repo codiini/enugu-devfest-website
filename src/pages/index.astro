@@ -22,7 +22,7 @@ import WorkExhibition from "../components/2024/WorkExhibition.astro";
     />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Enugu Devfest</title>
+    <title>Enugu Devfest 2024</title>
   </head>
   <body>
     <div class="bg-[#E4FAFF]">
@@ -45,3 +45,14 @@ import WorkExhibition from "../components/2024/WorkExhibition.astro";
     <FooterSection />
   </body>
 </html>
+
+<style>
+  :global(html) {
+    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    :global(html) {
+      scroll-behavior: auto;
+    }
+  }
+</style>

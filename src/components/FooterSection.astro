@@ -1,5 +1,5 @@
 ---
-
+import Icon from "./Icon.astro";
 ---
 
 <footer class="bg-black p-10">
@@ -8,22 +8,42 @@
       <ul
         class="flex flex-col justify-items-start items-start gap-y-8 text-left"
       >
-        <li><a href="">Schedule</a></li>
-        <li><a href="">Speakers</a></li>
+        <li><a href="/schedule">Schedule</a></li>
+        <li><a href="#speakers">Speakers</a></li>
       </ul>
+
       <ul class="flex flex-col gap-y-8 text-left">
-        <li><a href="">DP Generator</a></li>
-        <li><a href="">Venue Information</a></li>
-        <li><a href="">Join Our Community</a></li>
+        <li>
+          <a href="https://maps.app.goo.gl/RtSDipUkkFzb7eVD6"
+            >Venue Information</a
+          >
+        </li>
+        <li>
+          <a href="https://chat.whatsapp.com/KFrcuSzqlmdLeYPITA2sLO"
+            >Join Our Community</a
+          >
+        </li>
+        <li><a href="mailto:gdg.enugu042@gmail.com">Mail Us</a></li>
       </ul>
-      <ul class="flex flex-col gap-y-8 text-left">
-        <li><a href="">DP Generator</a></li>
-        <li><a href="">Venue Information</a></li>
-        <li><a href="">Join Our Community</a></li>
-      </ul>
+
+      <div class="flex flex-col gap-y-1 text-center">
+        <span class=""> Follow our socials: </span>
+        <ul class="flex items-center justify-center mt-3 gap-x-3">
+          <li>
+            <a href="https://x.com/GdgEnugu">
+              <Icon icon="x-twitter-outline" height="24" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/gdgenugu">
+              <Icon icon="instagram-outline" height="28" />
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="flex items-center justify-center">
-      <img width="1000" height="100" src="/large-footer-text.png" alt="" />
-    </div>
+  </div>
+  <div class="flex items-end justify-center">
+    <img width="1000" height="100" src="/large-footer-text.png" alt="" />
   </div>
 </footer>
