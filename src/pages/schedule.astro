@@ -1,0 +1,202 @@
+---
+import NavBar from "../components/NavBar.astro";
+import ScheduleCard, {
+  type Schedule,
+} from "../components/2024/ScheduleCard.astro";
+import JoinCommunity from "../components/2024/JoinCommunity.astro";
+import FooterSection from "../components/FooterSection.astro";
+
+const scheduleData = [
+  {
+    outlineColor: "#FAAB00",
+    bgColor: "#FFF2CE",
+    title: "registration and networking",
+    start: "10:30",
+    end: "10:40",
+    meridiem: "am",
+  },
+  {
+    outlineColor: "#FAAB00",
+    bgColor: "#FFF2CE",
+    title: "community activity opening note",
+    start: "10:30",
+    end: "10:45",
+    meridiem: "am",
+    facilitator: "Nwabude Obumneme",
+  },
+  {
+    outlineColor: "#FAAB00",
+    bgColor: "#FFF2CE",
+    title: "interlude - jazz band performance",
+    facilitator: "the makeshift band",
+    start: "10:45",
+    end: "11:15",
+    meridiem: "am",
+  },
+  {
+    outlineColor: "#EA4335",
+    bgColor: "#FFE6E6",
+    title: "keynote 1",
+    isSpeakerSession: true,
+    speaker: "ugochukwu aronu",
+    start: "11:20",
+    end: "11:35",
+    meridiem: "am",
+  },
+  {
+    outlineColor: "#EA4335",
+    bgColor: "#FFE6E6",
+    title:
+      "speaker 1 - data-driven design: using analytics to inform product design and development",
+    isSpeakerSession: true,
+    speaker: "ibeagha emmanuel",
+    start: "11:40",
+    end: "12:00",
+    meridiem: "am",
+  },
+  {
+    outlineColor: "#EA4335",
+    bgColor: "#FFE6E6",
+    title:
+      "speaker 2 - AI for sustainable agriculture: precision farming, weather forecasting & crop monitoring in enugu",
+    isSpeakerSession: true,
+    speaker: "emmanuel boniface",
+    start: "12:00",
+    end: "12:20",
+    meridiem: "pm",
+  },
+  {
+    outlineColor: "#FAAB00",
+    bgColor: "#FFF2CE",
+    title: "community onboarding note & sponsors showcase",
+    facilitator: "godson njoku & sponsor reps",
+    start: "12:20",
+    end: "01:00",
+    meridiem: "pm",
+  },
+  {
+    outlineColor: "#5CDB6D",
+    bgColor: "#DEF8E1",
+    title: "short break",
+    start: "01:00",
+    end: "01:10",
+    meridiem: "pm",
+  },
+  {
+    outlineColor: "#FAAB00",
+    bgColor: "#FFF2CE",
+    title: "panel discussion",
+    facilitator: "raymond",
+    start: "01:10",
+    end: "02:10",
+    meridiem: "pm",
+  },
+  {
+    outlineColor: "#EA4335",
+    bgColor: "#FFE6E6",
+    title: "speaker 3 - building local first web apps",
+    isSpeakerSession: true,
+    speaker: "iniubong obonguko",
+    start: "02:10",
+    end: "02:30",
+    meridiem: "pm",
+  },
+  {
+    outlineColor: "#FAAB00",
+    bgColor: "#FFF2CE",
+    title: "community builder showcase",
+    facilitator: "godson njoku",
+    start: "02:30",
+    end: "03:15",
+    meridiem: "pm",
+  },
+  {
+    outlineColor: "#5CDB6D",
+    bgColor: "#DEF8E1",
+    title: "lunch break",
+    start: "03:15",
+    end: "03:30",
+    meridiem: "pm",
+  },
+  {
+    outlineColor: "#FAAB00",
+    bgColor: "#FFF2CE",
+    title: "closing remarks",
+    facilitator: "daniel anomfueme",
+    start: "03:30",
+    end: "03:45",
+    meridiem: "pm",
+  },
+  {
+    outlineColor: "#5CDB6D",
+    bgColor: "#DEF8E1",
+    title: "event pictures and after-activities",
+    start: "03:45",
+    end: "--:--",
+    meridiem: "pm",
+  },
+] as Schedule[];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      rel="stylesheet"
+      href="/src/styles/global.css"
+      type="text/css"
+      charset="utf-8"
+    />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Schedule of Events | Enugu Devfest 2024</title>
+  </head>
+
+  <body>
+    <div class="bg-[#DEF8E1]">
+      <NavBar />
+      <header class="min-h-[50vh] h-full py-24">
+        <div class="container mx-auto">
+          <div
+            class="text-center flex items-center justify-end flex-col space-y-10"
+          >
+            <h1
+              class="capitalize font-bold text-8xl tracking-tighter text-[#050505]"
+            >
+              event schedule
+            </h1>
+            <p class="text-[#474747] mt-10 max-w-xl">
+              Join us for thrilling sessions, workshops, and networking
+              opportunities around the exciting world of technology.
+            </p>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <section class="bg-white min-h-screen h-auto px-20 py-20">
+      <div class="container mx-auto">
+        <p class="uppercase font-medium text-center text-[#FAAB00]">
+          a day full of innovation, learning, and meaningful connections.
+        </p>
+
+        <div class="text-center w-full pb-16">
+          <h2
+            class="text-[#050505] tracking-tighter font-bold text-[3.5rem] max-w-5xl w-full mx-auto capitalize"
+          >
+            Here’s what we’ve got in store for you at Enugu DevFest 2024
+          </h2>
+        </div>
+
+        <div class="space-y-6">
+          {scheduleData.map((data) => <ScheduleCard {...data} />)}
+        </div>
+      </div>
+    </section>
+
+    <JoinCommunity />
+
+    <FooterSection />
+  </body>
+</html>
