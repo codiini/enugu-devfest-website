@@ -27,7 +27,7 @@ const {
 } = Astro.props as Schedule;
 ---
 
-<div class="card-container p-10 rounded-3xl space-y-6">
+<div class="card-container px-6 py-8 lg:p-10 rounded-3xl space-y-6">
   <div
     class="date-pill border-2 w-fit py-3 px-6 rounded-full h-auto flex items-center gap-x-4"
   >
@@ -38,7 +38,7 @@ const {
     </p>
   </div>
   <div>
-    <h3 class="font-bold text-2xl xl:text-3xl capitalize">{title}</h3>
+    <h3 class="font-bold text-2xl lg:text-3xl capitalize max-w-3xl">{title}</h3>
     {
       (speaker?.length || facilitator?.length) && (
         <div class="mt-4">

@@ -1,23 +1,107 @@
-<nav class="flex justify-between py-10 container mx-auto">
+<nav
+  class="relative flex justify-between items-start py-10 px-3 lg:px-0 container mx-auto"
+>
+  <!-- Logo -->
   <a href="/">
     <img
       src="/logo.png"
       loading="lazy"
-      width="186"
+      width="150"
       height="53"
       alt="Enugu Devfest 2024 Logo"
     />
   </a>
 
-  <div class="flex justify-between gap-10">
-    <ul class="flex items-center justify-evenly gap-10">
-      <li><a href="/#speakers">Speakers</a></li>
-      <li><a href="/schedule">Schedule</a></li>
+  <!-- Hamburger Menu (Mobile) -->
+  <button
+    id="menu-toggle"
+    class="block md:hidden focus:outline-none z-50 text-white"
+    aria-label="Toggle menu"
+  >
+    <!-- Hamburger Icon -->
+    <svg
+      id="hamburger-icon"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="2"
+      stroke="currentColor"
+      class="w-8 h-8 text-black"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M4 6h16M4 12h16m-7 6h7"></path>
+    </svg>
+
+    <!-- Close Icon -->
+    <svg
+      id="close-icon"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="2"
+      stroke="currentColor"
+      class="w-8 h-8 text-white hidden relative"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M6 18L18 6M6 6l12 12"></path>
+    </svg>
+  </button>
+  <!-- Navigation Links -->
+  <div
+    id="menu-links"
+    class="hidden fixed z-40 inset-0 bg-black bg-opacity-90 flex-col items-center justify-center gap-6 md:static md:flex md:flex-row md:bg-transparent md:gap-10 transition-all duration-300 ease-in-out"
+  >
+    <ul class="flex flex-col items-center gap-6 md:flex-row md:gap-10">
+      <li>
+        <a href="/#speakers" class="text-white md:text-black">Speakers</a>
+      </li>
+      <li><a href="/schedule" class="text-white md:text-black">Schedule</a></li>
     </ul>
     <a
       href="https://gdg.community.dev/events/details/google-gdg-enugu-presents-devfest-enugu-2024/"
-      class="border-2 border-[#050505] rounded-[50px] p-4 w-44 h-auto inline-flex justify-center items-center text-center hover:bg-[#050505] hover:text-white transition-colors hover:duration-300 ease-in-out"
-      >RSVP</a
+      class="border-2 border-white text-white rounded-[50px] p-4 w-44 h-auto inline-flex justify-center items-center text-center hover:bg-white hover:text-black transition-colors hover:duration-300 ease-in-out md:border-[#050505] md:text-black md:hover:bg-[#050505] md:hover:text-white"
     >
+      RSVP
+    </a>
   </div>
 </nav>
+
+<script>
+  // Select DOM elements
+  const menuToggle = document.getElementById("menu-toggle");
+  const menuLinks = document.getElementById("menu-links");
+  const hamburgerIcon = document.getElementById("hamburger-icon");
+  const closeIcon = document.getElementById("close-icon");
+  const navItems = menuLinks?.querySelectorAll("a"); // Select all link items
+
+  // Function to toggle the menu
+  const toggleMenu = () => {
+    const isMenuOpen = menuLinks?.classList.toggle("hidden");
+    menuLinks?.classList.toggle("flex", !isMenuOpen);
+
+    if (hamburgerIcon && closeIcon) {
+      hamburgerIcon.classList.toggle("hidden", !isMenuOpen);
+      closeIcon.classList.toggle("hidden", isMenuOpen);
+    }
+  };
+
+  // Toggle menu on button click
+  menuToggle?.addEventListener("click", toggleMenu);
+
+  // Close menu when a nav item is clicked
+  navItems?.forEach((item) => {
+    item.addEventListener("click", () => {
+      menuLinks?.classList.add("hidden");
+      menuLinks?.classList.remove("flex");
+
+      if (hamburgerIcon && closeIcon) {
+        hamburgerIcon.classList.remove("hidden");
+        closeIcon.classList.add("hidden");
+      }
+    });
+  });
+</script>

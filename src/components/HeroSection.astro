@@ -6,20 +6,26 @@ import Icon from "./Icon.astro";
   <div class="relative container mx-auto">
     <div class="absolute flex w-full">
       <Icon class="mx-auto" color="#57CAFFB2" icon="doodles/equality" />
-      <Icon width="75" color="#EA4335" class="ml-auto" icon="doodles/plus" />
+      <Icon
+        color="#EA4335"
+        class="ml-auto relative right-20 w-16 lg:w-20"
+        icon="doodles/plus"
+      />
     </div>
     <div
       class="relative z-20 top-16 text-center flex items-center justify-end flex-col space-y-10"
     >
-      <h1 class="font-bold text-9xl tracking-tighter text-[#050505]">
+      <h1
+        class="font-bold text-6xl lg:text-9xl tracking-tighter text-[#050505]"
+      >
         <span> Welcome to DevFest</span>
         <span class="relative flex justify-center items-center">
           Enugu, 2024
-          <Icon class="ml-4" icon="doodles/bracket" />
+          <Icon class="ml-4 hidden lg:inline" icon="doodles/bracket" />
         </span>
       </h1>
 
-      <p class="text-[#474747] mt-10 max-w-lg">
+      <p class="text-[#474747] mt-10 max-w-xs lg:max-w-lg">
         Join us for thrilling sessions, workshops, and networking opportunities
         around the exciting world of technology.
       </p>
@@ -39,30 +45,33 @@ import Icon from "./Icon.astro";
     </div>
 
     <div class="absolute z-0 top-72 w-full flex">
+      <Icon class="relative bottom-14 w-20 lg:w-44 left-10 -rotate-12" icon="doodles/triplecircle" />
       <Icon
-        width="180"
-        class="relative bottom-14"
-        icon="doodles/triplecircle"
-      />
-      <Icon
-        width="150"
-        class="ml-auto relative right-40 top-20"
+        class="ml-auto relative lg:right-40 lg:top-20 top-24 w-20 lg:w-40"
         icon="doodles/semicircle"
       />
     </div>
   </div>
 </header>
 
-<div class="flex justify-evenly items-center bg-[#050505] text-white h-24">
-  <div class="flex items-center justify-center gap-x-2">
+<div
+  class="flex flex-col lg:flex-row justify-center lg:justify-evenly items-center bg-[#050505] text-white py-10 gap-y-10 h-fit lg:h-24"
+>
+  <div
+    class="flex flex-col lg:flex-row gap-y-4 items-center justify-center gap-x-2"
+  >
     <Icon icon="calendar" />
     <p>Saturday, December 7, 2024</p>
   </div>
-  <div class="flex items-center justify-center gap-x-2">
+  <div
+    class="flex flex-col lg:flex-row gap-y-4 items-center justify-center gap-x-2 max-w-[200px] lg:max-w-full text-center lg:text-left"
+  >
     <Icon icon="location-marker" />
-    <p>Hotel Sylvia Independence Avenue Enugu, 400102</p>
+    <p>Hotel Sylvia, Independence Avenue, Enugu, 400102</p>
   </div>
-  <div class="flex items-center justify-center gap-x-2">
+  <div
+    class="flex flex-col lg:flex-row gap-y-4 items-center justify-center gap-x-2"
+  >
     <Icon icon="time" />
     <p>10:30 AM – 3:45 PM (GMT+1)</p>
   </div>

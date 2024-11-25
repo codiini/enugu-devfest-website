@@ -1,13 +1,22 @@
 ---
 import Icon from "../Icon.astro";
+
+export interface Props {
+  name: string;
+  title: string;
+  linkedin: string;
+  x: string;
+}
+
+const { name, title, linkedin, x } = Astro.props as Props;
 ---
 
 <div class="w-fit text-white h-full">
   <div
     class="h-28 bg-[#050505] rounded-t-[25px] p-4 space-y-1 flex flex-col justify-center"
   >
-    <div class="font-bold text-xl">Denzel Washi</div>
-    <p class="uppercase">frontend engineer @ mast</p>
+    <div class="font-bold text-xl capitalize">{name}</div>
+    <p class="uppercase text-sm max-w-[200px]">{title}</p>
   </div>
   <img
     width="400"
@@ -18,10 +27,10 @@ import Icon from "../Icon.astro";
   <div
     class="h-20 bg-[#050505] rounded-b-[25px] flex items-center p-4 py-6 space-x-3"
   >
-    <a href="">
+    <a href={linkedin}>
       <Icon icon="linkedin" />
     </a>
-    <a href="">
+    <a href={x}>
       <Icon icon="x-twitter-outline" height="24" />
     </a>
   </div>
