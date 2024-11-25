@@ -1,21 +1,67 @@
 ---
 import SpeakerCard from "./SpeakerCard.astro";
+
+const speakers = [
+  {
+    name: "ugochukwu aronu",
+    title: "CEO & Founder @ Xend Finance",
+    linkedin: "",
+    x: "",
+  },
+  {
+    name: "ibeagha emmanuel",
+    title: "software developer @ TT consulting services",
+    linkedin: "",
+    x: "",
+  },
+  {
+    name: "emmanuel boniface",
+    title: "ML research engineer @ university of nigeria",
+    linkedin: "",
+    x: "",
+  },
+
+  {
+    name: "iniubong obonguko",
+    title: "software engineer & technical writer",
+    linkedin: "",
+    x: "",
+  },
+  {
+    name: "mahmood loke",
+    title: "CMO @ D creative hub",
+    linkedin: "",
+    x: "",
+  },
+  {
+    name: "kalu emeka",
+    title: "3d environmental artist @ blender stories",
+    linkedin: "",
+    x: "",
+  },
+  {
+    name: "Shamsudeen Adedokun",
+    title: "senior mobile developer @ university of nigeria",
+    linkedin: "",
+    x: "",
+  },
+];
 ---
 
-<section id="speakers" class="h-full py-32 bg-[#FFE6E6]">
+<section id="speakers" class="h-full py-20 lg:py-32 bg-[#FFE6E6]">
   <div class="px-8 container mx-auto">
     <p class="uppercase font-medium text-center text-[#FAAB00]">speakers</p>
 
-    <div class="relative z-50 text-center w-full space-y-4 pb-10">
+    <div class="relative z-30 text-center w-full space-y-4 pb-10">
       <h3
-        class="text-[#050505] font-bold text-[3.5rem] max-w-5xl w-full mx-auto capitalize"
+        class="text-[#050505] font-bold text-4xl lg:text-[3.5rem] tracking-tighter leading-tight max-w-5xl w-full mx-auto capitalize"
       >
         meet our speakers
       </h3>
     </div>
 
-    <div class="grid grid-cols-center-4 gap-6">
-      {[1, 2, 3, 4, 5, 6, 7].map(() => <SpeakerCard />)}
+    <div class="grid grid-cols-1 sm:grid-cols-center-2 xl:grid-cols-center-4 place-content-center place-items-center gap-x-4 gap-y-6">
+      {speakers.map((speaker) => <SpeakerCard {...speaker} />)}
     </div>
   </div>
 </section>

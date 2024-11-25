@@ -2,10 +2,12 @@
 import Icon from "../Icon.astro";
 ---
 
-<section class="relative h-full pt-24 pb-32 bg-[#DEF8E1B2] bg-opacity-70">
+<section
+  class="relative h-full py-20 lg:pt-24 lg:pb-32 bg-[#DEF8E1B2] bg-opacity-70"
+>
   <div class="px-8 container mx-auto">
     <Icon
-      class="absolute right-56 top-4"
+      class="absolute right-0 lg:-56 top-4"
       width={150}
       height={150}
       icon="doodles/skewed-semicircle"
@@ -15,9 +17,9 @@ import Icon from "../Icon.astro";
       the exhibition center
     </p>
 
-    <div class="relative z-50 text-center w-full space-y-4 pb-72">
+    <div class="relative z-30 text-center w-full space-y-4 pb-20 lg:pb-32">
       <h3
-        class="text-[#050505] font-bold text-[3.5rem] leading-tight max-w-5xl w-full mx-auto capitalize tracking-tighter"
+        class="text-[#050505] font-bold text-4xl lg:text-[3.5rem] leading-tight max-w-5xl w-full mx-auto capitalize tracking-tighter"
       >
         Call for Exhibition: <br /> Showcase your masterpiece
       </h3>
@@ -34,7 +36,7 @@ import Icon from "../Icon.astro";
     </div>
 
     <Icon
-      class="absolute z-10 top-64 left-64 -rotate-45"
+      class="absolute z-10 lg:top-64 bottom-72 lg:left-64 lg:-rotate-45"
       color="#57CAFF"
       icon="doodles/equality"
       width={80}
@@ -43,10 +45,17 @@ import Icon from "../Icon.astro";
 
     <div class="flex-grow flex items-end justify-center">
       <img
-        class="absolute bottom-0 2xl:w-[3000px] px-8 pb-20"
+        class="hidden lg:inline bottom-0 w-[3000px] px-8"
         width="2000"
         height="700"
         src="/images/2024/exhibition_mockup.png"
+        loading="lazy"
+      />
+      <img
+        class="lg:hidden rounded-[25px]"
+        width="2000"
+        height="700"
+        src="/images/2024/exhibition-single.webp"
         loading="lazy"
       />
     </div>
