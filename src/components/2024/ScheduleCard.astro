@@ -5,25 +5,24 @@ export interface Schedule {
   title: string;
   bgColor: string;
   outlineColor: string;
-  outline: string;
   start: string;
   end: string;
   meridiem: string;
   facilitator?: string;
+  performers?: string;
   speaker?: string;
-  isSpeakerSession?: boolean;
 }
+
 const {
   title,
   bgColor,
   outlineColor,
-  outline,
   start,
   end,
   meridiem,
   facilitator,
   speaker,
-  isSpeakerSession,
+  performers,
 } = Astro.props as Schedule;
 ---
 
@@ -40,19 +39,22 @@ const {
   <div>
     <h3 class="font-bold text-2xl lg:text-3xl capitalize max-w-3xl">{title}</h3>
     {
-      (speaker?.length || facilitator?.length) && (
+      (speaker?.length || facilitator?.length || performers?.length) && (
         <div class="mt-4">
-          {isSpeakerSession ? (
+          {speaker?.length ? (
             <p class="capitalize">
-              <span class="uppercase font-bold">Speaker :</span>
-              {speaker}
+              <span class="uppercase font-bold">Speaker:</span> {speaker}
             </p>
-          ) : (
+          ) : facilitator?.length ? (
             <p class="capitalize">
-              <span class="uppercase font-bold">facilitator:</span>
+              <span class="uppercase font-bold">Facilitator:</span>{" "}
               {facilitator}
             </p>
-          )}
+          ) : performers?.length ? (
+            <p class="capitalize">
+              <span class="uppercase font-bold">Performers:</span> {performers}
+            </p>
+          ) : null}
         </div>
       )
     }
