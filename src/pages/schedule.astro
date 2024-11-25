@@ -5,6 +5,7 @@ import ScheduleCard, {
 } from "../components/2024/ScheduleCard.astro";
 import JoinCommunity from "../components/2024/JoinCommunity.astro";
 import FooterSection from "../components/FooterSection.astro";
+import Icon from "../components/Icon.astro";
 
 const scheduleData = [
   {
@@ -141,7 +142,7 @@ const scheduleData = [
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <link
       rel="stylesheet"
       href="/src/styles/global.css"
@@ -170,6 +171,22 @@ const scheduleData = [
               Join us for thrilling sessions, workshops, and networking
               opportunities around the exciting world of technology.
             </p>
+          </div>
+          <div class="relative bottom-20">
+            <Icon
+              icon="doodles/equality"
+              class="absolute -rotate-45 left-48"
+              color="#57CAFF"
+              width={90}
+              height={90}
+            />
+            <Icon
+              icon="doodles/plus"
+              class="absolute right-32 ml-auto rotate-12"
+              color="#FF7DAF"
+              width={120}
+              height={120}
+            />
           </div>
         </div>
       </header>

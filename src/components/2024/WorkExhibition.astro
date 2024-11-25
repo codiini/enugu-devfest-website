@@ -1,5 +1,16 @@
+---
+import Icon from "../Icon.astro";
+---
+
 <section class="relative h-full pt-24 pb-32 bg-[#DEF8E1B2] bg-opacity-70">
   <div class="px-8 container mx-auto">
+    <Icon
+      class="absolute right-56 top-4"
+      width={150}
+      height={150}
+      icon="doodles/skewed-semicircle"
+    />
+
     <p class="uppercase font-medium text-center text-[#FAAB00] mb-4">
       the exhibition center
     </p>
@@ -22,6 +33,14 @@
       >
     </div>
 
+    <Icon
+      class="absolute z-10 top-64 left-64 -rotate-45"
+      color="#57CAFF"
+      icon="doodles/equality"
+      width={80}
+      height={80}
+    />
+
     <div class="flex-grow flex items-end justify-center">
       <img
         class="absolute bottom-0 2xl:w-[3000px] px-8 pb-20"
@@ -29,7 +48,6 @@
         height="700"
         src="/images/2024/exhibition_mockup.png"
         loading="lazy"
-        alt=""
       />
     </div>
   </div>

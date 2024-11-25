@@ -3,13 +3,22 @@ import Icon from "./Icon.astro";
 ---
 
 <header class="min-h-[60vh] pb-44 2xl:pt-20 pt- h-full">
-  <div class="container mx-auto">
+  <div class="relative container mx-auto">
+    <div class="absolute flex w-full">
+      <Icon class="mx-auto" color="#57CAFFB2" icon="doodles/equality" />
+      <Icon width="75" color="#EA4335" class="ml-auto" icon="doodles/plus" />
+    </div>
     <div
-      class="relative top-10 text-center flex items-center justify-end flex-col space-y-10"
+      class="relative z-20 top-16 text-center flex items-center justify-end flex-col space-y-10"
     >
       <h1 class="font-bold text-9xl tracking-tighter text-[#050505]">
-        Welcome to DevFest Enugu, 2024
+        <span> Welcome to DevFest</span>
+        <span class="relative flex justify-center items-center">
+          Enugu, 2024
+          <Icon class="ml-4" icon="doodles/bracket" />
+        </span>
       </h1>
+
       <p class="text-[#474747] mt-10 max-w-lg">
         Join us for thrilling sessions, workshops, and networking opportunities
         around the exciting world of technology.
@@ -27,6 +36,19 @@ import Icon from "./Icon.astro";
           >see schedule</a
         >
       </div>
+    </div>
+
+    <div class="absolute z-0 top-72 w-full flex">
+      <Icon
+        width="180"
+        class="relative bottom-14"
+        icon="doodles/triplecircle"
+      />
+      <Icon
+        width="150"
+        class="ml-auto relative right-40 top-20"
+        icon="doodles/semicircle"
+      />
     </div>
   </div>
 </header>
